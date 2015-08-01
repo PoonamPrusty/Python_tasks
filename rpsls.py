@@ -18,22 +18,16 @@ import random
 def name_to_number(name):
     
     if name == "rock":
-        
         return 0
     elif name == "Spock":
-        
-        return 1
+		return 1
     elif name == "paper":
-     
         return 2
     elif name == "lizard":
-        
-        return 3
+		return 3
     elif name == "scissors":
-      
-        return 4
+     	return 4
     else:
-        
         return False
     # convert name to number using if/elif/else
     # don't forget to return the result!
@@ -42,20 +36,15 @@ def name_to_number(name):
 def number_to_name(number):
     
     if number == 0:
-       
-        return "rock"
+       return "rock"
     elif number == 1:
-        
         return "Spock"
-    elif number == 2:
-
-        return "paper"
+    elif number == 2
+    	return "paper"
     elif number == 3:
-        
-        return "lizard"
+      	return "lizard"
     elif number == 4:
-       
-        return "scissors"
+      	return "scissors"
     else:
         
         return False
@@ -91,29 +80,32 @@ def rpsls(player_choice):
     # print out the message for computer's choice
 
     # compute difference of comp_number and player_number modulo five
-    if(computer_choice - player_choice) % 5 == 0:
-        print "It's a tie!"
+    difference = (computer_choice - player_choice) % 5
+    
+
+    # use if/elif/else to determine winner, print winner message
         
-    elif(computer_choice - player_choice) % 5 <= 0:
+    if difference == 1 or difference == 2:
         print "Computer Wins!"
         
-    elif(computer_choice - player_choice) % 5 >= 0:
+    elif difference == 3 or difference == 4:
         print "Player Wins!"
+        
+    elif difference == 0:
+        print "It's a tie!"
         
     else:
         return False
 
-    # use if/elif/else to determine winner, print winner message
-
     
-# test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
+# test your code
 rpsls("rock")
 rpsls("Spock")
 rpsls("paper")
 rpsls("lizard")
 rpsls("scissors")
 
-# always remember to check your completed program against the grading rubric
+
 
 
 
